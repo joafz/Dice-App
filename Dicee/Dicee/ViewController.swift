@@ -27,6 +27,11 @@ class ViewController: UIViewController {
     @IBAction func rollButtonPressed(_ sender: Any) {
         updateDiceImages()
     }
+    //Change Dice faces based on shake
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        updateDiceImages()
+    }
+    //change Dice faces
     func updateDiceImages(){
         //Generating random numbers
         randomDiceIndex1 = Int.random(in: 0...5)
